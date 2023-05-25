@@ -1,0 +1,29 @@
+***********Customer Account Tracker Application using spring boot MicroServices***********
+
+MicroServices:
+  1)customer Tracker application service(account service) (port=8001)
+  2)customer service (port=8000)
+ 
+Customer services:
+    EndPoint:
+       1)Get annotation:
+           1)get all customer details - localhost:8000/customers
+           2)get customer by id - localhost:8000/customers/display/{id}
+       2)post annotation:
+           1)create customer details - localhost:8000/customers/create
+       3)put annotation:
+           1)edit customer details - localhost:8000/customers/edit/{id}
+
+Customer Tracker Application service(account service):
+    EndPoint:
+      1)post annotation:
+          1)create new account for customer - localhost:8001/accounts/create
+      2)Get annotation:
+          1)display all accounts - localhost:8001/accounts/display
+          2)display all customer - localhost:8001/customers/display
+          3)display account by id - localhost:8001/accounts/display/{id}
+          4)transfer funds - localhost:8001/accounts/transfer/from/{from}/to/{to}/{amount}
+          5)display balance - localhost:8001/accounts/getBalance/{acc}
+      3)Put annotation:
+          1)edit customer details - localhost:8001/accounts/customers/edit/{id}
+       
